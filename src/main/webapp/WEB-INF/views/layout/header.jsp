@@ -17,7 +17,7 @@
 								<a href="javascript:dialogLogin();" title="로그인"><i class="bi bi-lock"></i></a>
 							</div>
 							<div class="p-2">
-								<a href="${pageContext.request.contextPath}/" title="회원가입"><i class="bi bi-person-plus"></i></a>
+								<a href="${pageContext.request.contextPath}/member/member" title="회원가입"><i class="bi bi-person-plus"></i></a>
 							</div>	
 						</c:if>
 						<c:if test="${not empty sessionScope.member}">
@@ -144,7 +144,7 @@
 		        return;
 		    }
 		
-		    f.action = "${pageContext.request.contextPath}";
+		    f.action = "${pageContext.request.contextPath}/member/login";
 		    f.submit();
 		}
 	</script>
@@ -180,7 +180,7 @@
 	                        </div>
 	                        <div>
 	                    		 <p class="form-control-plaintext text-center">
-	                    		 	<a href="#" class="text-decoration-none me-2">패스워드를 잊으셨나요 ?</a>
+	                    		 	<a href="${pageContext.request.contextPath}/member/pwd" class="text-decoration-none me-2">패스워드를 잊으셨나요 ?</a>
 	                    		 </p>
 	                    	</div>
 	                    </form>
@@ -188,7 +188,7 @@
 	                    <div>
 	                        <p class="form-control-plaintext mb-0">
 	                        	아직 회원이 아니세요 ?
-	                        	<a href="${pageContext.request.contextPath}" class="text-decoration-none">회원가입</a>
+	                        	<a href="${pageContext.request.contextPath}/member/member" class="text-decoration-none">회원가입</a>
 	                        </p>
 	                    </div>
 	                </div>
