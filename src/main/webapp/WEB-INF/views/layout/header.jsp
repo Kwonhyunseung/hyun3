@@ -28,7 +28,7 @@
 								<a href="${pageContext.request.contextPath}/" title="로그아웃"><i class="bi bi-unlock"></i></a>
 							</div>					
 						</c:if>
-						<c:if test="${sessionScope.member.userLevel >= 51}">
+						<c:if test="${sessionScope.member.role >= 51}">
 							<div class="p-2">
 								<a href="${pageContext.request.contextPath}/admin" title="관리자"><i class="bi bi-gear"></i></a>
 							</div>					

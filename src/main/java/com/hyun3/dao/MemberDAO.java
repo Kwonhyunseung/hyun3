@@ -19,10 +19,10 @@ public class MemberDAO {
     String sql;
 
     try {
-      sql = "SELECT mb_Num, userId, name, "
+      sql = "SELECT mb_Num, userId, nickname, "
           + " role, ca_Day, modifyDay "
           + " FROM member "
-          + " WHERE userId = ? AND pwd = ? AND block = 1";
+          + " WHERE userId = ? AND pwd = ? AND block = 0";
 
       pstmt = conn.prepareStatement(sql);
 
@@ -36,7 +36,7 @@ public class MemberDAO {
 
         dto.setMb_Num(rs.getLong("mb_Num"));
         dto.setUserId(rs.getString("userId"));
-        dto.setName(rs.getString("name"));
+        dto.setName(rs.getString("nickname"));
         dto.setRole(rs.getInt("role"));
         dto.setCa_Day(rs.getString("ca_Day"));
         dto.setModifyDay(rs.getString("modifyDay"));
